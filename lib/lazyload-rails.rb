@@ -53,6 +53,7 @@ ActionView::Helpers::AssetTagHelper.module_eval do
 
     img["data-original"] = img["src"]
     img["data-srcset"] = img["srcset"]
+    img["srcset"] = ""
     img["src"] = Lazyload::Rails.configuration.placeholder
 
     img.to_s.html_safe
